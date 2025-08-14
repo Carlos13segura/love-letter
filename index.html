@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor ❤️</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Audio Player (Hidden) -->
+    <audio id="backgroundMusic" loop>
+        <source src="Lil Peep - Star Shopping (Official Audio).mp3" type="audio/mpeg">
+        <!-- Updated to reference Lil Peep's Star Shopping -->
+    </audio>
+
+    <!-- Navigation Dots -->
+    <div class="navigation-dots" id="navigationDots">
+        <div class="nav-dot active" data-section="0"></div>
+        <div class="nav-dot" data-section="1"></div>
+        <div class="nav-dot" data-section="2"></div>
+        <div class="nav-dot" data-section="3"></div>
+        <div class="nav-dot" data-section="4"></div>
+    </div>
+
+    <!-- Music Control -->
+    <div class="music-control" id="musicControl">
+        <iconify-icon icon="mdi:music" id="musicIcon"></iconify-icon>
+        <div class="music-title">Star Shopping - Lil Peep</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container" id="mainContainer">
+        
+        <!-- Section 1: Typography Hero - AMOR -->
+        <section class="typography-section" data-section="0">
+            <div class="typography-background" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.40_cdc35c2e.jpg-mdIfmfcqKPqxMvYenihSX1YXVJQnj2.jpeg')"></div>
+            <div class="typography-overlay"></div>
+            <div class="typography-content">
+                <div class="large-letters">
+                    <span class="letter" data-letter="A">A</span>
+                    <span class="letter" data-letter="M">M</span>
+                    <span class="letter" data-letter="O">O</span>
+                    <span class="letter" data-letter="R">R</span>
+                </div>
+                <div class="typography-subtitle">Para la persona más especial de mi vida</div>
+            </div>
+        </section>
+
+        <!-- Section 2: Typography Hero - BELLA -->
+        <section class="typography-section" data-section="1">
+            <div class="typography-background" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.39_ba495231.jpg-LannidXgdcKCn1OjMyZ6mx1p3mQqdv.jpeg')"></div>
+            <div class="typography-overlay"></div>
+            <div class="typography-content">
+                <div class="large-letters">
+                    <span class="letter" data-letter="B">B</span>
+                    <span class="letter" data-letter="E">E</span>
+                    <span class="letter" data-letter="L">L</span>
+                    <span class="letter" data-letter="L">L</span>
+                    <span class="letter" data-letter="A">A</span>
+                </div>
+                <div class="typography-subtitle">Tu belleza ilumina cada uno de mis días</div>
+            </div>
+        </section>
+
+        <!-- Section 3: Advanced Photo Gallery -->
+        <section class="gallery-section" data-section="2">
+            <div class="gallery-header">
+                <h2 class="gallery-title">Nuestros Momentos</h2>
+                <div class="gallery-subtitle">Cada foto cuenta nuestra historia de amor</div>
+            </div>
+            
+            <!-- Main Carousel -->
+            <div class="main-carousel-container">
+                <div class="main-carousel" id="mainCarousel">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide active">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.40_a2190826.jpg-vJApP3ZndJxMvImdHmnTh2EzPTTHk0.jpeg" alt="Momento especial 1">
+                            <div class="slide-overlay">
+                                <h3>Reflejos de Amor</h3>
+                                <p>En cada reflejo veo nuestro futuro juntos</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.39_5265e3a6.jpg-2oEZl7bcjZr4XrrpG65DHKFqCrtErJ.jpeg" alt="Momento especial 2">
+                            <div class="slide-overlay">
+                                <h3>Momentos Íntimos</h3>
+                                <p>Donde el tiempo se detiene solo para nosotros</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.40_21413d25.jpg-cCauh50ZY9wl3NRtaU5mG8TXgpiqx6.jpeg" alt="Momento especial 3">
+                            <div class="slide-overlay">
+                                <h3>Belleza Natural</h3>
+                                <p>Tu esencia pura que me enamora cada día</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.40_8a0f0ef3.jpg-SmvANelie7djD2PYUlCyf8fUjB9UMX.jpeg" alt="Momento especial 4">
+                            <div class="slide-overlay">
+                                <h3>Sonrisas Eternas</h3>
+                                <p>Tu sonrisa es mi razón de ser</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.37_7aff33bd.jpg-hEZgJ7kZUnmkLC34Cl4d6DdpekI2GT.jpeg" alt="Momento especial 5">
+                            <div class="slide-overlay">
+                                <h3>Miradas Profundas</h3>
+                                <p>En tus ojos encuentro mi hogar</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.41_1c6892a5.jpg-EV0XUbxiTUtoHOYhGWshKdnaN3I4AP.jpeg" alt="Momento especial 6">
+                            <div class="slide-overlay">
+                                <h3>Elegancia Única</h3>
+                                <p>Cada gesto tuyo es pura poesía</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.39_3cf1f1e9.jpg-7rlYeT5WC2DD99WSa2IBzKXAzHfCVT.jpeg" alt="Momento especial 7">
+                            <div class="slide-overlay">
+                                <h3>Misterio y Pasión</h3>
+                                <p>Tu esencia me cautiva sin palabras</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-btn prev-btn" id="prevBtn">
+                    <iconify-icon icon="mdi:chevron-left"></iconify-icon>
+                </button>
+                <button class="carousel-btn next-btn" id="nextBtn">
+                    <iconify-icon icon="mdi:chevron-right"></iconify-icon>
+                </button>
+
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <div class="indicator active" data-slide="0"></div>
+                    <div class="indicator" data-slide="1"></div>
+                    <div class="indicator" data-slide="2"></div>
+                    <div class="indicator" data-slide="3"></div>
+                    <div class="indicator" data-slide="4"></div>
+                    <div class="indicator" data-slide="5"></div>
+                    <div class="indicator" data-slide="6"></div>
+                </div>
+            </div>
+
+            <!-- Thumbnail Grid -->
+            <div class="thumbnail-grid">
+                <div class="thumbnail-item" data-slide="0">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.40_a2190826.jpg-vJApP3ZndJxMvImdHmnTh2EzPTTHk0.jpeg" alt="Thumbnail 1">
+                </div>
+                <div class="thumbnail-item" data-slide="1">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.39_5265e3a6.jpg-2oEZl7bcjZr4XrrpG65DHKFqCrtErJ.jpeg" alt="Thumbnail 2">
+                </div>
+                <div class="thumbnail-item" data-slide="2">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.40_21413d25.jpg-cCauh50ZY9wl3NRtaU5mG8TXgpiqx6.jpeg" alt="Thumbnail 3">
+                </div>
+                <div class="thumbnail-item" data-slide="3">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.40_8a0f0ef3.jpg-SmvANelie7djD2PYUlCyf8fUjB9UMX.jpeg" alt="Thumbnail 4">
+                </div>
+                <div class="thumbnail-item" data-slide="4">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.37_7aff33bd.jpg-hEZgJ7kZUnmkLC34Cl4d6DdpekI2GT.jpeg" alt="Thumbnail 5">
+                </div>
+                <div class="thumbnail-item" data-slide="5">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.41_1c6892a5.jpg-EV0XUbxiTUtoHOYhGWshKdnaN3I4AP.jpeg" alt="Thumbnail 6">
+                </div>
+                <div class="thumbnail-item" data-slide="6">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagen%20de%20WhatsApp%202025-08-14%20a%20las%2012.20.39_3cf1f1e9.jpg-7rlYeT5WC2DD99WSa2IBzKXAzHfCVT.jpeg" alt="Thumbnail 7">
+                </div>
+            </div>
+
+            <!-- Gallery Controls -->
+            <div class="gallery-controls">
+                <button class="gallery-btn" id="autoplayBtn">
+                    <iconify-icon icon="mdi:play"></iconify-icon>
+                    <span>Auto-play</span>
+                </button>
+                <button class="gallery-btn" id="fullscreenBtn">
+                    <iconify-icon icon="mdi:fullscreen"></iconify-icon>
+                    <span>Pantalla Completa</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 4: Love Letter -->
+        <section class="letter-section" data-section="3">
+            <div class="letter-container">
+                <div class="letter-header">
+                    <iconify-icon icon="mdi:email-heart-outline" class="letter-icon"></iconify-icon>
+                    <h2 class="letter-title">Mi Carta de Amor</h2>
+                    <div class="letter-date">Para ti, mi amor eterno</div>
+                </div>
+                
+                <div class="letter-content">
+                    <p class="letter-greeting">Mi amor hermoso,</p>
+                    
+                    <p class="letter-paragraph">
+                        Cada día que pasa me enamoro más de ti. Eres la luz que ilumina mis días más oscuros y la razón por la que sonrío cada mañana. Tu belleza no solo radica en tu rostro perfecto, sino en tu alma pura y tu corazón bondadoso.
+                    </p>
+                    
+                    <p class="letter-paragraph">
+                        Cuando te miro, veo mi futuro, veo mis sueños hechos realidad. Eres mi complemento perfecto, mi media naranja, mi alma gemela. No hay palabras suficientes para expresar lo mucho que significas para mí.
+                    </p>
+                    
+                    <p class="letter-paragraph">
+                        Me he descubierto pensando en ti en los momentos más simples: al mirar el cielo, al escuchar una canción, o incluso al sentir la brisa de la tarde. Y en cada uno de esos pensamientos, hay una certeza: mi corazón late más fuerte porque estás en él.
+                    </p>
+                    
+                    <p class="letter-paragraph">
+                        Quiero pasar el resto de mi vida a tu lado, creando memorias hermosas, superando obstáculos juntos y amándonos cada día más. Eres mi todo, mi razón de ser, mi amor eterno.
+                    </p>
+                    
+                    <p class="letter-paragraph">
+                        Te amo más de lo que las palabras pueden expresar, más de lo que el tiempo puede medir, más de lo que mi corazón puede contener.
+                    </p>
+                    
+                    <p class="letter-signature">
+                        Para siempre tuyo,<br>
+                        <span class="signature-name">Con todo mi amor ❤️</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Interactive Effects -->
+        <section class="interactive-section" data-section="4">
+            <div class="interactive-header">
+                <h2 class="interactive-title">Efectos Mágicos</h2>
+                <div class="interactive-subtitle">Crea momentos especiales con estos efectos románticos</div>
+            </div>
+            
+            <div class="effects-grid">
+                <div class="effect-card" onclick="createHeartbeat()">
+                    <div class="effect-icon">
+                        <iconify-icon icon="mdi:heart-pulse"></iconify-icon>
+                    </div>
+                    <h3>Latidos del Corazón</h3>
+                    <p>Siente como late mi corazón por ti</p>
+                    <div class="effect-trigger">Presiona H</div>
+                </div>
+                
+                <div class="effect-card" onclick="createStars()">
+                    <div class="effect-icon">
+                        <iconify-icon icon="mdi:star-shooting"></iconify-icon>
+                    </div>
+                    <h3>Lluvia de Estrellas</h3>
+                    <p>Estrellas que brillan como nuestro amor</p>
+                    <div class="effect-trigger">Presiona S</div>
+                </div>
+                
+                <div class="effect-card" onclick="createPetals()">
+                    <div class="effect-icon">
+                        <iconify-icon icon="mdi:flower"></iconify-icon>
+                    </div>
+                    <h3>Pétalos de Rosa</h3>
+                    <p>Pétalos que danzan en el viento</p>
+                    <div class="effect-trigger">Presiona P</div>
+                </div>
+                
+                <div class="effect-card" onclick="createFireworks()">
+                    <div class="effect-icon">
+                        <iconify-icon icon="mdi:firework"></iconify-icon>
+                    </div>
+                    <h3>Fuegos Artificiales</h3>
+                    <p>Celebremos nuestro amor</p>
+                    <div class="effect-trigger">Presiona F</div>
+                </div>
+            </div>
+            
+            <div class="love-message">
+                <p>"Haz clic en cualquier lugar para crear corazones mágicos, o usa las teclas para efectos especiales"</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fullscreen Modal -->
+    <div class="fullscreen-modal" id="fullscreenModal">
+        <div class="fullscreen-content">
+            <button class="close-fullscreen" id="closeFullscreen">
+                <iconify-icon icon="mdi:close"></iconify-icon>
+            </button>
+            <img id="fullscreenImage" src="/placeholder.svg" alt="Imagen en pantalla completa">
+            <div class="fullscreen-controls">
+                <button class="fullscreen-btn" id="fullscreenPrev">
+                    <iconify-icon icon="mdi:chevron-left"></iconify-icon>
+                </button>
+                <button class="fullscreen-btn" id="fullscreenNext">
+                    <iconify-icon icon="mdi:chevron-right"></iconify-icon>
+                </button>
+            </div>
+            <div class="fullscreen-info">
+                <h3 id="fullscreenTitle">Título</h3>
+                <p id="fullscreenDescription">Descripción</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (incluye Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Iconify Web Component -->
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+
+    <!-- Motion One (versión global) -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
